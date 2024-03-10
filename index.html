@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HogwartsFergana</title>
+<link rel="icon shortcut" href="https://cdn.icon-icons.com/icons2/1352/PNG/512/if-14-harry-potter-colour-hogwarts-shield-2730327_88145.png" type="image/png" sizes="57x57">
+<style>
+:root{
+    --scrollbar: #ED8E00;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar);
+    border-radius: 6px;
+}    
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a; /* Dark background */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: url(https://www.psu.com/wp/wp-content/uploads/2020/10/Hogwarts-Legacy-PS4-PS5-Wallpapers-13.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .container {
+    max-width: 400px;
+    background-color: #505050a7; /* Light background */
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: orange; /* Mystic purple */
+    
+  }
+  
+  label {
+    font-weight: bold;
+    color: orange; /* Mystic purple */
+  }
+  
+  input[type="email"],
+  input[type="text"],
+  input[type="tel"],
+  textarea,
+  button {
+    width: calc(100% - 22px); /* Adjust for input padding and border */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #663399; /* Mystic purple border */
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  button {
+    background-color: #663399; /* Mystic purple */
+    color: #ffffff; /* White text */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #4b0082; /* Darker mystic purple */
+    color: orange;
+  }
+  
+.theme{
+  padding-right: 13px;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.subject{
+  margin-bottom: 15px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Hogwarts</h2>
+  <form id="emailForm">
+    <label for="senderEmail">Почта / Pochta:</label>
+    <input type="email" id="senderEmail" name="senderEmail" required><br>
+    <label for="senderName">Имя / Ism:</label>
+    <input type="text" id="senderName" name="senderName" required><br>
+    <label for="senderPhone">Номер / Raqam:</label>
+    <input type="tel" id="senderPhone" name="senderPhone" required><br>
+    <label for="subject" class="theme">Тема / Mavzu:</label>
+
+    <select id="subject" class="subject" name="subject" required>
+      <option value="" disabled selected>Select a subject</option>
+      <option value="Английский язык / Ingliz tili">Английский язык / Ingliz tili</option>
+      <option value="Русский язык / Rus tili">Русский язык / Rus tili</option>
+      <option value="Корейский язык / Koreys tili">Корейский язык / Koreys tili</option>
+      <option value="Биология / Biologiya">Биология / Biologiya</option>
+      <option value="Химия / Kimyo">Химия / Kimyo</option>
+      <option value="Математика / Matematika">Математика / Matematika</option>
+      <option value="История / Hikoya">История / Hikoya</option>
+      <option value="Продленка / Maktabdan keyin">Продленка / Maktabdan keyin</option>
+      
+    </select>
+    
+    <br>
+
+    <input type="hidden" id="recipientEmail" name="recipientEmail" value="hogwartsfergana@gmail.com"> 
+    <!-- hogwartsfergana@gmail.com -->
+
+    <button type="submit">Отправить / Yuborish</button>
+  </form>
+</div>
+
+<script>
+document.getElementById("emailForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  
+
+  var senderEmail = document.getElementById("senderEmail").value;
+  var senderName = document.getElementById("senderName").value;
+  var senderPhone = document.getElementById("senderPhone").value;
+  var recipientEmail = document.getElementById("recipientEmail").value;
+  var subject = document.getElementById("subject").value;
+  
+
+});
+</script>
+
+</body>
+</html>
